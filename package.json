@@ -2,9 +2,7 @@
   "name": "another-ether",
   "version": "0.1.0",
   "description": "AETH",
-  "main": "index.js",
-  "repository": "ssh://git@github.com/m0t0k1ch1/another-ether.git",
-  "author": "m0t0k1ch1 <m0t0k1ch1.310@gmail.com>",
+  "author": "m0t0k1ch1",
   "license": "MIT",
   "dependencies": {
     "truffle-hdwallet-provider": "^0.0.3",
