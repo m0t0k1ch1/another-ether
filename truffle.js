@@ -1,6 +1,6 @@
 var HDWalletProvider = require('truffle-hdwallet-provider');
+
 var mnemonic = process.env.ROPSTEN_MNEMONIC;
-var accessToken = process.env.INFURA_ACCESS_TOKEN;
 
 module.exports = {
   networks: {
@@ -16,12 +16,8 @@ module.exports = {
       gas: 500000
     },
     ropsten: {
-      provider: function() {
-        return new HDWalletProvider(
-          mnemonic,
-          'https://ropsten.infura.io/' + accessToken
-        );
-      },
+      provider: () =>
+        new HDWalletProvider(mnemonic, 'https://ropsten.infura.io/'),
       network_id: 3,
       gas: 500000
     }
