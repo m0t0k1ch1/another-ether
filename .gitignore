@@ -3,4 +3,5 @@
 /cache/
 /coverage/
 /node_modules/
+/.envrc
 /coverage.json
