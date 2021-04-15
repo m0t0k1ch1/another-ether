@@ -1,10 +1,19 @@
 {
-  "name": "another-ether",
-  "version": "0.1.0",
-  "description": "AETH",
-  "author": "m0t0k1ch1",
+  "scripts": {
+    "coverage": "hardhat coverage",
+    "test": "hardhat test"
+  },
   "dependencies": {
-    "truffle-hdwallet-provider": "=1.0.5",
-    "openzeppelin-solidity": "=2.1.1"
-  }
+    "@openzeppelin/contracts": "^4.0.0"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.3.0",
+    "ethers": "^5.1.0",
+    "hardhat": "^2.1.2",
+    "solidity-coverage": "^0.7.16"
+  },
+  "license": "MIT"
 }
