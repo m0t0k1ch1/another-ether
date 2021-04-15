@@ -1,10 +1,10 @@
-pragma solidity >=0.4.21 <0.6.0;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.3;
 
-import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
-import "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-contract AnotherEther is ERC20, ERC20Detailed {
-  constructor(uint256 supply) ERC20Detailed("AnotherEther", "AETH", 18) public {
-    _mint(msg.sender, supply);
-  }
+contract AnotherEther is ERC20 {
+    constructor() ERC20("AnotherEther", "AETH") {
+        _mint(msg.sender, 21000000);
+    }
 }
