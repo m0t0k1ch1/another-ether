@@ -42,15 +42,6 @@ export class Account extends Entity {
     this.set("id", Value.fromString(value));
   }
 
-  get count(): BigInt {
-    let value = this.get("count");
-    return value.toBigInt();
-  }
-
-  set count(value: BigInt) {
-    this.set("count", Value.fromBigInt(value));
-  }
-
   get balance(): BigInt {
     let value = this.get("balance");
     return value.toBigInt();

@@ -1,5 +1,4 @@
 type Account @entity {
   id: ID!
-  count: BigInt!
   balance: BigInt!
 }
