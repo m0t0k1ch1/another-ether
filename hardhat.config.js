@@ -19,8 +19,10 @@ module.exports = {
       chainId: 1337,
     },
     goerli: {
-      url: `https://eth-goerli.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
-      accounts: [`0x${process.env.PRIVATE_KEY}`],
+      url: `https://eth-goerli.alchemyapi.io/v2/${
+        process.env.ALCHEMY_API_KEY || ""
+      }`,
+      accounts: [`0x${process.env.PRIVATE_KEY || ""}`],
     },
   },
 };
