@@ -11,7 +11,7 @@ describe("AnotherEther contract", () => {
   beforeEach(async () => {
     AETH = await ethers.getContractFactory("AnotherEther");
     aeth = await AETH.deploy();
-    [deployer] = await ethers.getSigners();
+    [deployer, other] = await ethers.getSigners();
   });
 
   describe("deployment", () => {
@@ -21,6 +21,14 @@ describe("AnotherEther contract", () => {
       expect(await aeth.totalSupply()).to.equal(totalSupply);
       expect(await aeth.decimals()).to.equal(18);
       expect(await aeth.balanceOf(deployer.address)).to.equal(totalSupply);
+    });
+  });
+
+  describe("tx", () => {
+    it("transfer", async () => {
+      await expect(() =>
+        aeth.transfer(other.address, 1)
+      ).to.changeTokenBalances(aeth, [deployer, other], [-1, 1]);
     });
   });
 });
